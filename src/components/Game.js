@@ -1,8 +1,11 @@
-const Game = ({ question, onClickVariant }) => {
+import { questions } from "../data/questions";
+
+const Game = ({ step, question, onClickVariant }) => {
+  const percentage  = Math.round((step / questions.length) * 100)
     return (
       <>
         <div className="progress">
-          <div style={{ width: "50%" }} className="progress__inner"></div>
+          <div style={{ width: `${percentage}%` }} className="progress__inner"></div>
         </div>
         <h1>{question.title}</h1>
         <ul>
