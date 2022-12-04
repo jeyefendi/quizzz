@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #6a5be2;
+%flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  @extend %flex-center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #006DBA;
   height: 100vh;
 }
 
 .App {
-  width: 500px;
-  border-radius: 30px;
-  padding: 40px;
+  @extend %flex-center;
+  flex-direction: column;
+  gap: 2em;
+  width: 70vw;
+  img {
+    width: 50%;
+  }
+}
+
+.Quizz {
+  width: 70%;
+  border-radius: 2em;
+  padding: 2em;
   background-color: #fff;
   position: relative;
 
@@ -25,13 +39,13 @@ body {
     button {
       font-weight: bold;
       font-family: 'Nunito', sans-serif;
-      border-radius: 30px;
+      border-radius: 2em;
       border: 0;
-      padding: 15px 30px;
-      font-size: 20px;
+      padding: 1em 2em;
+      font-size: 1em;
       background-color: darken(#ff006e, 3%);
       color: #fff;
-      margin-top: 20px;
+      margin-top: 1em;
       cursor: pointer;
     }
 
@@ -40,7 +54,7 @@ body {
     }
 
     img {
-      width: 150px;
+      width: 10em;
     }
   }
 
@@ -74,14 +88,14 @@ body {
 
   &:before {
     width: 95%;
-    bottom: -10px;
+    bottom: -1.5em;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 0;
   }
 
   &:after {
     width: 90%;
-    bottom: -20px;
+    bottom: -3em;
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 1;
   }

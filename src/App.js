@@ -17,12 +17,16 @@ const App = () => {
   };
 
   return (
+
     <div className="App">
+      <img src="https://cdn.pixabay.com/photo/2017/02/17/15/25/quiz-2074324_960_720.png" alt="Logo"></img>
+      <div className="Quizz">
       {step !== questions.length ? (
         <Game step={step} question={question} onClickVariant={onClickVariant} />
       ) : (
         <Result correct={correct} />
       )}
+      </div>
     </div>
   );
 };
